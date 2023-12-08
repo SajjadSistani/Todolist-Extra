@@ -4,7 +4,10 @@ class TodoView {
   render() {
     const markup = this._generateMarkup();
     this._parentElement.insertAdjacentHTML("afterbegin", markup);
-    console.log(markup);
+  }
+
+  addLoadHandler(handler) {
+    window.addEventListener("load", handler);
   }
 
   _generateMarkup() {
