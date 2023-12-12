@@ -1,5 +1,5 @@
 class TodoView {
-  _parentElement = document.querySelector(".form-container");
+  _parentElement = document.querySelector(".item-box");
 
   render() {
     const markup = this._generateMarkup();
@@ -7,63 +7,31 @@ class TodoView {
   }
 
   addLoadHandler(handler) {
-    window.addEventListener("load", handler);
+    window.addEventListener("DOMContentLoaded", handler);
   }
 
   _generateMarkup() {
     return `
-    <form>
-    <!-- Title and Date -->
-    <div class="input-container">
-      <input
-        id="title-input"
-        type="text"
-        placeholder="عنوان"
-        maxlength="30"
-      />
-      <input id="date-input" type="date" />
-    </div>
+    <h1 class="item-box-title">عنوان</h1>
+    <span class="item-box-date">1402/01/01</span>
 
-    <!-- Add Description -->
-    <div class="info-container">
-      <div class="textarea-container">
-        <div class="textarea-container-title">
-          <span>توضیحات </span>
-        </div>
-
-        <div>
-          <textarea
-            id="description-element"
-            cols="30"
-            rows="10"
-          ></textarea>
-        </div>
-      </div>
-      <!-- Location -->
-      <div class="location-container">
-        <svg class="location-icon">
-          <use href="#map"></use>
-        </svg>
-        <input
-          id="location-element"
-          type="text"
-          placeholder="موقعیت"
-          maxlength="30"
-        />
+    <div class="icon-box">
+      <p class="item-box-description">
+        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+        استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در
+        ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+      </p>
+      <!-- Location Icon & Input -->
+      <div class="item-box-icon">
+        <i class="fa fa-location-pin" aria-hidden="true"></i>
+        <input type="text" placeholder="موقعیت" />
       </div>
     </div>
-
-    <!-- Submit button -->
-    <div class="btn-container">
-      <svg class="btn btn-add">
-        <use href="#check"></use>
-      </svg>
-
-      <svg class="btn btn-delete">
-        <use href="#x"></use>
-      </svg>
-    </div>
-  </form>`;
+    <!-- Buttons -->
+    <span class="icon-check-times">
+      <i class="fa fa-check" aria-hidden="true"></i>
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </span>`;
   }
 }
 

@@ -1,5 +1,5 @@
 class TodoListView {
-  _parentElement = document.querySelector(".container");
+  _parentElement = document.querySelector(".todo-box");
 
   render() {
     const markup = this._generateMarkup();
@@ -7,27 +7,24 @@ class TodoListView {
   }
 
   addLoadHandler(handler) {
-    window.addEventListener("load", handler);
+    document.addEventListener("DOMContentLoaded", handler);
   }
   _generateMarkup() {
     return `
-    <svg class="bars-icon">
-        <use href="#bars"></use>
-      </svg>
-      <div class="container-box">
-        <!-- Title and Date Todo -->
-        <div class="title-container">
-          <span class="title">عنوان</span>
-          <span class="history">تاریخ</span>
-        </div>
+    <div>
+          <!-- Todo box text -->
+          <div class="todo-box-text-box">
+            <span>عنوان</span>
+            <span>1402/01/01</span>
+          </div>
 
-        <!-- Description Todo -->
-        <div class="description-checkbox">
-          <p class="description">
+          <p class="todo-box-description">
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-            استفاده از طراحان گرافیک است. چاپگرها و متون
+            استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان
           </p>
-          <input type="checkbox" id="checkbox" />`;
+          <hr class="todo-box-hr" />
+        </div>`;
   }
 }
 

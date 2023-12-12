@@ -3,104 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To-Do List App</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="./fontawesome-free-6.5.1-web/css/all.min.css"
+    />
+    <title>Todolist</title>
     <script defer type="module" src="controller.js"></script>
   </head>
   <body>
-    <!-- Icons -->
-    <svg class="svg-container">
-      <symbol
-        id="map"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
-        />
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
-        />
-      </symbol>
-      <symbol
-        id="check"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-        />
-      </symbol>
-      <symbol
-        id="x"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-        />
-      </symbol>
-      <symbol
-        id="bars"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-        />
-      </symbol>
-    </svg>
-
     <div class="container">
-      <svg class="bars-icon">
-        <use href="#bars"></use>
-      </svg>
-      <div class="container-box">
-        <!-- Title and Date Todo -->
-        <div class="title-container">
-          <span class="title">عنوان</span>
-          <span class="history">تاریخ</span>
-        </div>
+      <!-- Todos box -->
+      <section class="todo-box"></section>
 
-        <!-- Description Todo -->
-        <div class="description-checkbox">
-          <p class="description">
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-            استفاده از طراحان گرافیک است. چاپگرها و متون
-          </p>
-          <input type="checkbox" id="checkbox" />`;
-        </div>
+      <!-- Menu Hamburger Icon -->
+      <span class="bars-icon">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </span>
 
-        <div class="spread"></div>
-      </div>
-
-      <div class="border-elem"></div>
-
-      <!-- Form -->
-
-      <div class="form-container"></div>
+      <!-- Item box -->
+      <section class="item-box"></section>
     </div>
   </body>
 </html>
