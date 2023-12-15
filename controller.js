@@ -14,16 +14,12 @@ const controllAddTodo = () => {
   console.log(state);
 };
 const controllListView = () => {
-  if (state.todoList.length > 1) {
-    todoListView.render();
-  } else {
-    todoForm.render();
-    todoForm.addClickHandler(controllAddTodo);
-  }
+  todoListView.render();
 };
 
 const init = () => {
   todoView.addLoadHandler(controllTodoView);
   todoListView.addLoadHandler(controllListView);
+  todoForm.addClickHandler(controllAddTodo);
 };
 init();

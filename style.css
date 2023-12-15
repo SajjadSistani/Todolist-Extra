@@ -82,11 +82,14 @@
 }
 
 .todo-box {
-  background-color: #88ab8e;
+  background-color: #e4ece5;
   border-radius: 5px;
-  border: 1px solid #88ab8e;
-  width: 50%;
-  margin-right: 20px;
+  border: 1px solid #ffffff;
+  min-height: 330px;
+  overflow: auto;
+  text-align: center;
+  margin-top: 10px;
+  padding: 5px;
 }
 
 .todo-box-text-box {
@@ -217,4 +220,71 @@ input {
     font-size: 16px;
     margin: 10px;
   }
+}
+
+.custom-form {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-textarea {
+  resize: vertical;
+}
+
+.form-submit-btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.form-submit-btn i {
+  margin-right: 4px;
+}
+
+.todoSection {
+  display: flex;
+  flex-direction: column;
+  background-color: #88ab8e;
+  border-radius: 5px;
+  border: 1px solid #88ab8e;
+  width: 50%;
+  margin-right: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.todoItem {
+  display: flex;
+  width: 400px;
+  height: 80px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #88ab8e;
+  margin-bottom: 5px;
 }
