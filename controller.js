@@ -11,15 +11,18 @@ const controllAddTodo = () => {
   const title = document.getElementById("title").value;
   const description = document.getElementById("description").value;
   createTodo(title, description);
+
+  // Render the updated list
+  todoListView.renderTodo(state.todoList[state.todoList.length - 1]);
+
   console.log(state);
 };
-const controllListView = () => {
-  todoListView.render();
-};
+
+const controllListView = () => {};
 
 const init = () => {
   todoView.addLoadHandler(controllTodoView);
-  todoListView.addLoadHandler(controllListView);
+
   todoForm.addClickHandler(controllAddTodo);
 };
 init();

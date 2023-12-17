@@ -7,7 +7,7 @@ class TodoView {
   }
 
   addLoadHandler(handler) {
-    window.addEventListener("DOMContentLoaded", handler);
+    document.querySelector(".item-box").addEventListener("click", (e) => {});
   }
 
   _generateMarkup() {
@@ -21,12 +21,7 @@ class TodoView {
         استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در
         ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
       </p>
-      <!-- Location Icon & Input -->
-      <div class="item-box-icon">
-        <i class="fa fa-location-pin" aria-hidden="true"></i>
-        <input type="text" placeholder="موقعیت" />
-      </div>
-    </div>
+      
     <!-- Buttons -->
     <span class="icon-check-times">
       <i class="fa fa-check" aria-hidden="true"></i>
