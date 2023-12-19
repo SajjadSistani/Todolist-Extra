@@ -1,31 +1,40 @@
 class TodoView {
   _parentElement = document.querySelector(".item-box");
-
-  render() {
-    const markup = this._generateMarkup();
+  _todo;
+  render(data) {
+    this._todo = data;
+    const markup = this._generateMarkup(data);
+    this._parentElement.innerHTML = "";
     this._parentElement.insertAdjacentHTML("afterbegin", markup);
   }
 
   addLoadHandler(handler) {
-    document.querySelector(".item-box").addEventListener("click", (e) => {});
+    document.querySelector(".todo-box").addEventListener("click", handler);
   }
 
-  _generateMarkup() {
+  addButtonsHandler(handler) {
+    document.querySelector(".btn").addEventListener("click", handler);
+  }
+
+  doneWithTodo() {
+    this._parentElement.innerHTML = "";
+    document.querySelector(`[data-id="${this._todo.id}"]`).remove();
+  }
+
+  _generateMarkup(data) {
     return `
-    <h1 class="item-box-title">عنوان</h1>
-    <span class="item-box-date">1402/01/01</span>
+    <h1 class="item-box-title">${data.title}</h1>
+    <span class="item-box-date">${data.date}</span>
 
     <div class="icon-box">
       <p class="item-box-description">
-        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-        استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در
-        ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+      ${data.description} 
       </p>
       
     <!-- Buttons -->
     <span class="icon-check-times">
-      <i class="fa fa-check" aria-hidden="true"></i>
-      <i class="fa fa-times" aria-hidden="true"></i>
+      <i class="fa fa-check btn" aria-hidden="true"></i>
+      
     </span>`;
   }
 }

@@ -1,10 +1,19 @@
-import { createTodo, state } from "./model.js";
+import { createTodo, findTodo, state } from "./model.js";
 import todoForm from "./views/todoForm.js";
 import todoListView from "./views/todoListView.js";
 import todoView from "./views/todoView.js";
 
-const controllTodoView = () => {
-  todoView.render();
+const controllTodoView = (e) => {
+  const target = e.target.closest(".todoItem");
+  const id = target.dataset.id;
+  if (!target) return;
+  const todo = findTodo(Number(id));
+  todoView.render(todo);
+  todoView.addButtonsHandler(controllButtons);
+};
+
+const controllButtons = () => {
+  todoView.doneWithTodo();
 };
 
 const controllAddTodo = () => {
@@ -18,11 +27,8 @@ const controllAddTodo = () => {
   console.log(state);
 };
 
-const controllListView = () => {};
-
 const init = () => {
   todoView.addLoadHandler(controllTodoView);
-
   todoForm.addClickHandler(controllAddTodo);
 };
 init();
