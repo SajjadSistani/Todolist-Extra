@@ -22,7 +22,7 @@ export const createTodo = (title, description) => {
   };
   addTodo(newTodo);
 };
-
+//find todo
 export const findTodo = (id) => {
   return state.todoList.find((t) => t.id === id);
 };

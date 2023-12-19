@@ -39,4 +39,5 @@ const init = () => {
   todoView.addLoadHandler(controllTodoView);
   todoForm.addClickHandler(controllAddTodo);
 };
+//initials
 init();

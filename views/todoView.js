@@ -11,7 +11,7 @@ class TodoView {
   addLoadHandler(handler) {
     document.querySelector(".todo-box").addEventListener("click", handler);
   }
-
+  //CheckButton
   addButtonsHandler(handler) {
     document.querySelector(".btn").addEventListener("click", handler);
   }

@@ -4,27 +4,27 @@
 }
 
 @font-face {
-  font-family:'vazir-medium';
-  src: url('./assets/Fonts/Vazir-Medium.woff2') format('woff2');
+  font-family: "vazir-medium";
+  src: url("./assets/Fonts/Vazir-Medium.woff2") format("woff2");
 }
 @font-face {
-  font-family:'vazir-bold';
-  src: url('./assets/Fonts/Vazir-Bold.woff2') format('woff2');
+  font-family: "vazir-bold";
+  src: url("./assets/Fonts/Vazir-Bold.woff2") format("woff2");
 }
 body {
-  font-family:'vazir-medium';
+  font-family: "vazir-medium";
 }
-.title-work{
-  font-family:'vazir-bold';
+.title-work {
+  font-family: "vazir-bold";
   color: #88ab8e;
 }
-.todoItem{
-  display:flex;
+.todoItem {
+  display: flex;
   justify-content: space-Between;
-  font-size:16px;
+  font-size: 16px;
   border: 1px solid white !important;
   color: #afc8ad;
-  padding:14px;
+  padding: 14px;
 }
 .container {
   margin: 10px;
@@ -306,7 +306,7 @@ input {
   display: flex;
   width: 400px;
   height: 80px;
-  border: 1px solid black;
+  border: 1px solid rgb(5, 5, 5);
   border-radius: 5px;
   background-color: #88ab8e;
   margin-bottom: 5px;

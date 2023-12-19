@@ -7,7 +7,7 @@ class TodoListView {
       this._parentElement.insertAdjacentHTML("beforeend", markup);
     });
   }
-
+  //render one todo
   renderTodo(data) {
     const markup = this._generateMarkup(data);
     this._parentElement.insertAdjacentHTML("beforeend", markup);
