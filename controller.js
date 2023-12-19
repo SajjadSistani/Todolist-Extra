@@ -17,14 +17,22 @@ const controllButtons = () => {
 };
 
 const controllAddTodo = () => {
-  const title = document.getElementById("title").value;
-  const description = document.getElementById("description").value;
+  const titleInput = document.getElementById("title");
+  const descriptionInput = document.getElementById("description");
+
+  // Get the values from the inputs
+  const title = titleInput.value;
+  const description = descriptionInput.value;
+
+  // Create a new todo
   createTodo(title, description);
+
+  // Clear the input values
+  titleInput.value = "";
+  descriptionInput.value = "";
 
   // Render the updated list
   todoListView.renderTodo(state.todoList[state.todoList.length - 1]);
-
-  console.log(state);
 };
 
 const init = () => {
